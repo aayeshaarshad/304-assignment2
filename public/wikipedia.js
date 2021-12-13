@@ -1,7 +1,7 @@
 var input = document.cookie
-    .split('; ')
-    .find(row => row.startsWith('searchText='))
-    .split('=')[1];
+  .split('; ')
+  .find(row => row.startsWith('searchText='))
+  .split('=')[1];
 
 handleSubmit(input);
 
@@ -11,56 +11,40 @@ function handleSubmit(input) {
   fetchResults(searchQuery);
 }
 
-// grab the image from the first search resut
-function fetchImage(searchQuery){
-  const endpoint = `https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${searchQuery}&origin=*`;
-    fetch(endpoint)
-      .then(response => response.json())
-      .then(data => {
-        const result = data.query.pages;
-        const id = Object.keys(result)[0];
-        if(result[id].original){
-          const imgURL = result[id].original.source;
-          console.log(imgURL); 
-          displayImage(imgURL);
-        }
-      })};
 
 // more on using wikipedia action=query https://www.mediawiki.org/wiki/API:Query
 function fetchResults(searchQuery) {
-	  const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
-  	fetch(endpoint)
-  		.then(response => response.json())
-  		.then(data => {
-  	  	const results = data.query.search;
-        fetchImage(searchQuery);
-        displayResults(results);
-		})
-    .catch(() => console.log('An error occurred'));
-}
-
-// add the image from wikipedia
-function displayImage(imageURL){
-  const searchResults = document.querySelector('.searchResults');
-  searchResults.insertAdjacentHTML('beforeend',
-                                  `<img src="${imageURL}"/>`);
+  const endpoint = `https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=${searchQuery}`;
+  fetch(endpoint)
+    .then(response => response.json())
+    .then(response => {
+      const results = response.query.pages;
+      displayResults(results);
+    })
+    .catch(err => {
+      console.log('caught it!', err);
+    });
 }
 
 // display resuts on the page
 function displayResults(results) {
-  const searchResults = document.querySelector('.searchResults');
-  searchResults.innerHTML = '';
-  const result = results[0];
-  const url = encodeURI(`https://en.wikipedia.org/wiki/${result.title}`);
 
-   searchResults.insertAdjacentHTML('beforeend',
-    `<div class="resultItem">
+  for (const [key, value] of Object.entries(results)) {
+    const result = value;
+    const searchResults = document.querySelector('.searchResults');
+    searchResults.innerHTML = '';
+    const url = encodeURI(`https://en.wikipedia.org/wiki/${result.title}`);
+
+    searchResults.insertAdjacentHTML('beforeend',
+      `<div class="resultItem">
       <h3 class="resultItem-title">
-        <a href="${url}" target="_blank" rel="noopener">${result.title}</a>
+        <a href="${url}" target="_blank" rel="noopener">Wikipedia Page of ${result.title}</a>
       </h3>
-      <span class="resultItem-snippet">${result.snippet}</span><br>
+      <span class="resultItem-snippet">${result.extract}</span><br>
     </div>`
-  );
+    );
+    break;
+  }
 }
-  
+
 

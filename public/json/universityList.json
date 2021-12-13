@@ -1,0 +1,63 @@
+[
+    {
+        "name":"Uppsala University",
+        "twitterHandle":"UU_University"
+    },
+    {
+        "name":"Lund University",
+        "twitterHandle":"lunduniversity"
+    },    
+    {
+        "name":"University of Gothenburg",
+        "twitterHandle":"goteborgsuni"
+    },
+    {
+        "name":"Stockholm University",
+        "twitterHandle":"Stockholms_univ"
+    },
+    {
+        "name":"Karolinska Institutet",
+        "twitterHandle":"karolinskainst"
+    },
+    {
+        "name":"Umeå University",
+        "twitterHandle":"UmeaUniversity"
+    },
+    {
+        "name":"KTH Royal Institute of Technology",
+        "twitterHandle":"KTHuniversity"
+    },
+    {
+        "name":"Linköping University",
+        "twitterHandle":"LiU_frageladan"
+    },
+    {
+        "name":"Swedish University of Agricultural Sciences",
+        "twitterHandle":"_SLU"
+    },
+    {
+        "name":"Luleå University of Technology",
+        "twitterHandle":"LTUniv"
+    },
+    {
+        "name":"Karlstad University",
+        "twitterHandle":"KAU"
+    },
+    {
+        "name":"Örebro University",
+        "twitterHandle":"orebrouni"
+    },
+    {
+        "name":"Mid Sweden University",
+        "twitterHandle":"Mittuni"
+    },
+    {
+        "name":"Linnaeus University",
+        "twitterHandle":"linneuni"
+    },
+    {
+        "name":"Malmö University",
+        "twitterHandle":"malmouni"
+    }
+
+]

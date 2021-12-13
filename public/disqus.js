@@ -5,8 +5,8 @@ var input = document.cookie
 
 
 var disqus_config = function () {
-this.page.url = 'https://ayesha-404.glitch.me/search?searchText=${input}';  
-this.page.identifier = '/search?searchText=${input}'; 
+this.page.url = 'https://ayesha1-404.glitch.me/search?searchText=' + input;  
+this.page.identifier = '/search?searchText=' + input; 
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

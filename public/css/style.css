@@ -1,0 +1,124 @@
+body{
+  background-color: hsl(188, 62%, 94%);
+}
+
+.main {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  height: 5%;
+  align-self: stretch;
+  align-items: center;
+}
+
+.search-input{
+  width: 600px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  transition: transform 250ms ease-in-out;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+.search-input:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 100px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px  5px 5px 5px ;
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#universityList {
+  width: 48%;
+  color: white;
+  background: black;
+  border: 1px solid #00B4CC;
+
+}
+.card-title{
+  margin-left: 5px;
+
+}
+
+.grandparent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+
+}
+
+.parent1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.parent2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99%;
+  border: 1px solid #00B4CC;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 5px  5px 5px 5px ;
+  
+}
+
+.child1 {
+  margin: 5px;
+  height: 500px;
+  width: 30%;
+  border: 1px solid #00B4CC;
+  border-radius: 5px  5px 5px 5px ;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14pt;
+;
+  
+}
+
+
+.child2 {
+  margin: 5px;
+  height: 500px;
+  width: 70%;
+  border: 1px solid #00B4CC;
+  border-radius: 5px  5px 5px 5px ;
+}
+
+.wikiImage{
+  width: 20%;
+}

@@ -17,6 +17,10 @@ app.set('views', __dirname + '/views');
 //static folder
 app.use(express.static('public'));
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 app.get('/', function(req, res) {
     //open form.html from the views directory
@@ -37,5 +41,8 @@ app.post('/', urlencodedParser, function(req, res) {
     //open submitted.html after the user has submitted the form
     res.cookie('searchText', searchText, { sameSite: 'none', secure: true}).render('mashup.html', {output: searchText});
 });
+
+
+
 
 app.listen(3000);

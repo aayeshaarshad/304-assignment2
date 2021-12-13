@@ -1,19 +1,35 @@
 <html>
-    <script src="disqus.js"></script>
-    <script src="wikipedia.js" defer></script>
-        
+<script src="disqus.js"></script>
+<script src="wikipedia.js" defer></script>
+<script src="twitter.js" defer></script>
+
+<link rel='stylesheet' type="text/css" href="/css/style.css">
+
 <body>
 
+    <div class="search">
+        <form action="/search" method="GET" class="searchForm">
+            <input name="searchText" placeholder="Search for any Swedish University" type="search" class="search-input" id="search">
+            <button type="submit" class="searchButton">Search</button>
+          </form>
+          <script src="search.js"></script>
+    </div>
+    <div class="grandparent">
+        <div class="parent1">
+            <div class="child1">
+                <section class="searchResults"></section>
+            </div>
+            <div class="child2" id="twitter">
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
 
+        <div class="parent2" id="disqus_thread">
+            <h2> Discuss <%= output %>
+            </h2>
+        </div>
+    </div>
 
-    <p id="demo"></p>
-    <section class="searchResults"></section>
-
-
-    <div id="disqus_thread"></div>
-
-    <!--a class="twitter-timeline" href="https://twitter.com/linneuni?ref_src=twsrc%5Etfw">Tweets by linneuni</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script-->
 </body>
-</html>
 
+</html>
