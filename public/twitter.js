@@ -28,6 +28,10 @@ const outputHtml = (handle) => {
 }
 
 
-searchuniversity(input);
+window.addEventListener('DOMContentLoaded',function () {
+    searchuniversity(input);
+  });
+
+
 
 

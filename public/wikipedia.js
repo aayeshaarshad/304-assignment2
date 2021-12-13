@@ -3,8 +3,12 @@ var input = document.cookie
   .find(row => row.startsWith('searchText='))
   .split('=')[1];
 
-handleSubmit(input);
 
+
+
+window.addEventListener('DOMContentLoaded',function () {
+  handleSubmit(input);
+});
 
 function handleSubmit(input) {
   const searchQuery = input.trim();
