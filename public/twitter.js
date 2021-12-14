@@ -23,7 +23,8 @@ const outputHtml = (handle) => {
     console.log("handle : " + handle);
     const outputdiv = document.getElementById('twitter');
     outputdiv.insertAdjacentHTML('beforeend',
-        `<a class="twitter-timeline" data-lang="en" data-height="500" data-theme="dark" href="https://twitter.com/${handle}?ref_src=twsrc%5Etfw">Tweets by ${handle}</a>`
+        `<a class="twitter-timeline" data-lang="en" data-height="500" data-theme="dark" href="https://twitter.com/${handle}?ref_src=twsrc%5Etfw">Tweets by ${handle}</a>
+       `
     );
 }
 
