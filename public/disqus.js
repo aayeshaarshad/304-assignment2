@@ -3,7 +3,9 @@ var input = document.cookie
     .find(row => row.startsWith('searchText='))
     .split('=')[1];
 
-
+//disqus provide below code that we can integrate in our project
+//only two thing, we need to change here is page.url and page.identifier
+//I am creating separate page for each univeristy
 window.addEventListener('DOMContentLoaded', function () {
     var disqus_config = function () {
         this.page.url = 'https://ayesha1-404.glitch.me/search?searchText=' + input;

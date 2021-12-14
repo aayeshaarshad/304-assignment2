@@ -1,11 +1,11 @@
-
+//reading selected university from cookies
 var input = document.cookie
     .split('; ')
     .find(row => row.startsWith('searchText='))
     .split('=')[1];
 
 
-
+//getting the twitter handle of selected university
 const searchuniversity = async (input) => {
     input = input.replace(/%20/g, " ");
     const res = await fetch('/json/universityList.json');
@@ -19,7 +19,6 @@ const searchuniversity = async (input) => {
 };
 
 const outputHtml = (handle) => {
-
     console.log("handle : " + handle);
     const outputdiv = document.getElementById('twitter');
     outputdiv.insertAdjacentHTML('beforeend',
@@ -27,7 +26,6 @@ const outputHtml = (handle) => {
        `
     );
 }
-
 
 window.addEventListener('DOMContentLoaded',function () {
     searchuniversity(input);

@@ -9,6 +9,7 @@
 
 <body>
 
+    <!-- it had four parts, search bar, wikipedia div, twitter div and disqus div-->
     <div class="search">
         <form action="/search" method="GET" class="searchForm">
             <select name="searchText" placeholder="Search for any Swedish University"  class="search-input" id="search">>
@@ -20,16 +21,16 @@
     </div>
     <div class="grandparent">
         <div class="parent1">
-            <div class="child1">
+            <div class="child1">   <!-- render Wikipedia object-->
                 <section class="searchResults"></section>
             </div>
-            <div class="child2" id="twitter">
+            <div class="child2" id="twitter"> <!-- render twitter object, twitter provides widget that we can use in our website-->
                 
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
 
-        <div class="parent2" id="disqus_thread">
+        <div class="parent2" id="disqus_thread">  <!-- render disqus object-->
             <h2> Discuss <%= output %>
             </h2>
         </div>

@@ -17,27 +17,18 @@ app.set('views', __dirname + '/views');
 //static folder
 app.use(express.static('public'));
 
-
+//load index.html
 app.get('/', function (req, res) {
     res.render('index.html');
 });
 
-
+//load mashup.html on uni selection
 app.get('/search', urlencodedParser, function (req, res) {
-    //retrieve first and lastname
+    //retrieve searched university
     var searchText = req.query.searchText;
-    //open submitted.html after the user has submitted the form
-    res.cookie('searchText', searchText, { sameSite: 'none', secure: true }).render('mashup.html', { output: searchText });
+        //setting up cookie beore rendering
+        res.cookie('searchText', searchText, { sameSite: 'none', secure: true }).render('mashup.html', { output: searchText });
 });
-
-app.post('/', urlencodedParser, function (req, res) {
-    //retrieve first and lastname
-    var searchText = req.body.searchText;
-    //open submitted.html after the user has submitted the form
-    res.cookie('searchText', searchText, { sameSite: 'none', secure: true }).render('mashup.html', { output: searchText });
-});
-
-
 
 
 app.listen(3000);

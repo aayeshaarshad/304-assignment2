@@ -1,8 +1,11 @@
+//reading selected university from cookies
 var input = document.cookie
   .split('; ')
   .find(row => row.startsWith('searchText='))
   .split('=')[1];
 
+
+//on dom content loaded, i am reading json file  
 window.addEventListener('DOMContentLoaded', async () => {
   input = input.replace(/%20/g, " ");
   const res = await fetch('/json/universityList.json');
@@ -16,7 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 
-// more on using wikipedia action=query https://www.mediawiki.org/wiki/API:Query
+// using the below endpoint the get the wikipedia extract of each university
 function fetchResults(searchQuery) {
   const endpoint = `https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&exintro&explaintext&titles=${searchQuery}`;
   fetch(endpoint)
