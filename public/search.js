@@ -35,12 +35,10 @@
   window.addEventListener('DOMContentLoaded', async () => {
     const res = await fetch('/json/universityList.json');
     const universities = await res.json();
-    console.log(universities);
     var selectHTML = '<option value=""> Select a University..</option>';
     for (const [key, value] of Object.entries(universities)) {
         selectHTML+= '<option value="' + value.name + '">' + value.name + '</option>';
     }
-    console.log(selectHTML);
     document.getElementById('search').innerHTML= selectHTML;
   });
 
