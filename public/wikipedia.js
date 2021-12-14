@@ -3,17 +3,17 @@ var input = document.cookie
   .find(row => row.startsWith('searchText='))
   .split('=')[1];
 
-
-
-
-window.addEventListener('DOMContentLoaded',function () {
-  handleSubmit(input);
+window.addEventListener('DOMContentLoaded', async () => {
+  input = input.replace(/%20/g, " ");
+  const res = await fetch('/json/universityList.json');
+  const universities = await res.json();
+  for (const [key, value] of Object.entries(universities)) {
+    if (value.name.toLowerCase() === input.toLowerCase()) {
+      fetchResults(value.wikiPage);
+      break;
+    }
+  }
 });
-
-function handleSubmit(input) {
-  const searchQuery = input.trim();
-  fetchResults(searchQuery);
-}
 
 
 // more on using wikipedia action=query https://www.mediawiki.org/wiki/API:Query

@@ -1,63 +1,77 @@
 [
     {
-        "name":"Uppsala University",
-        "twitterHandle":"UU_University"
-    },
-    {
-        "name":"Lund University",
-        "twitterHandle":"lunduniversity"
-    },    
-    {
-        "name":"University of Gothenburg",
-        "twitterHandle":"goteborgsuni"
-    },
-    {
-        "name":"Stockholm University",
-        "twitterHandle":"Stockholms_univ"
+        "name":"Karlstad University",
+        "twitterHandle":"KAU",
+        "wikiPage":"Karlstad University"
     },
     {
         "name":"Karolinska Institutet",
-        "twitterHandle":"karolinskainst"
-    },
-    {
-        "name":"Umeå University",
-        "twitterHandle":"UmeaUniversity"
+        "twitterHandle":"karolinskainst",
+        "wikiPage":"Karolinska_Institute"
     },
     {
         "name":"KTH Royal Institute of Technology",
-        "twitterHandle":"KTHuniversity"
+        "twitterHandle":"KTHuniversity",
+        "wikiPage":"KTH Royal Institute of Technology"
     },
     {
-        "name":"Linköping University",
-        "twitterHandle":"LiU_frageladan"
-    },
-    {
-        "name":"Swedish University of Agricultural Sciences",
-        "twitterHandle":"_SLU"
-    },
-    {
-        "name":"Luleå University of Technology",
-        "twitterHandle":"LTUniv"
-    },
-    {
-        "name":"Karlstad University",
-        "twitterHandle":"KAU"
-    },
-    {
-        "name":"Örebro University",
-        "twitterHandle":"orebrouni"
-    },
-    {
-        "name":"Mid Sweden University",
-        "twitterHandle":"Mittuni"
+        "name":"Linkoping University",
+        "twitterHandle":"LiU_frageladan",
+        "wikiPage":"Linköping University"
     },
     {
         "name":"Linnaeus University",
-        "twitterHandle":"linneuni"
+        "twitterHandle":"linneuni",
+        "wikiPage":"Linnaeus University"
     },
     {
-        "name":"Malmö University",
-        "twitterHandle":"malmouni"
+        "name":"Lulea University of Technology",
+        "twitterHandle":"LTUniv",
+        "wikiPage":"Luleå University of Technology"
+    },
+    {
+        "name":"Lund University",
+        "twitterHandle":"lunduniversity",
+        "wikiPage":"Lund University"
+    },
+    {
+        "name":"Malmo University",
+        "twitterHandle":"malmouni",
+        "wikiPage":"Malmö University"
+    },
+    {
+        "name":"Mid Sweden University",
+        "twitterHandle":"Mittuni",
+        "wikiPage":"Mid Sweden University"
+    },
+    {
+        "name":"Orebro University",
+        "twitterHandle":"orebrouni",
+        "wikiPage":"Örebro University"
+    },
+    {
+        "name":"Stockholm University",
+        "twitterHandle":"Stockholms_univ",
+        "wikiPage":"Stockholm University"
+    },
+    {
+        "name":"Swedish University of Agricultural Sciences",
+        "twitterHandle":"_SLU",
+        "wikiPage":"Swedish University of Agricultural Sciences"
+    },  
+    {
+        "name":"University of Gothenburg",
+        "twitterHandle":"goteborgsuni",
+        "wikiPage":"University of Gothenburg"
+    },
+    {
+        "name":"Umea University",
+        "twitterHandle":"UmeaUniversity",
+        "wikiPage":"Umeå University"
+    },
+    {
+        "name":"Uppsala University",
+        "twitterHandle":"UU_University",
+        "wikiPage":"Uppsala University"
     }
-
 ]
